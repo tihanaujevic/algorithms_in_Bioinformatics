@@ -12,7 +12,7 @@ def approximate(pattern, dna, mismatch):
     result = ''
     for i in range (len(dna) - len(pattern) + 1):
         first = dna[i: i+len(pattern)]
-        if hamming(first, pattern) <= 3:
+        if hamming(first, pattern) <= mismatch:
             result += str(i) + ' '
     
     return result
